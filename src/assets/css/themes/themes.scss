@@ -1,0 +1,24 @@
+@import "~@angular/material/theming";
+@import "assets/css/themes/components.scss";
+
+@include mat-core();
+
+$template-app-primary: mat-palette($mat-pink, 700, 100, 900);
+$template-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$template-app-warn: mat-palette($mat-red, A200);
+
+$template-app-dark-theme: mat-dark-theme($template-app-primary, $template-app-accent, $template-app-warn);
+$template-app-light-theme: mat-light-theme($template-app-primary, $template-app-accent, $template-app-warn);
+
+@mixin theme($theme) {
+    @include angular-material-theme($theme);
+    @include template-components-theme($theme);
+}
+
+.light-theme {
+    @include theme($template-app-light-theme);
+}
+
+.dark-theme {
+    @include theme($template-app-dark-theme);
+}

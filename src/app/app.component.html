@@ -1,0 +1,15 @@
+<app-navbar icon="monetization_on" brand="Gestão Financeira">
+    <app-navitem route="">Dashboard</app-navitem>
+    <app-navitem route="clientes">Clientes</app-navitem>
+    <app-navitem route="fluxocaixa">Fluxo Caixa</app-navitem>
+    <app-navitem route="faleconosco">Fale Conosco</app-navitem>
+    <app-navitem [matMenuTriggerFor]="settings">
+        <span class="material-icons">settings</span>
+    </app-navitem>
+    <mat-menu #settings="matMenu">
+        <a mat-menu-item (click)="onLightThemeClick()">Tema Claro</a>
+        <a mat-menu-item (click)="onDarkThemeClick()">Tema Escuro</a>
+    </mat-menu>
+</app-navbar>
+
+<router-outlet></router-outlet>

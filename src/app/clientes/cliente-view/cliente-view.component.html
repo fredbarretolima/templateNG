@@ -1,0 +1,52 @@
+<h2 class="text-center">Cliente</h2>
+
+<div class="w-100 pb-1">
+    <strong>Nome: </strong>
+    {{cliente.nome}}
+</div>
+
+<div class="w-100 pb-1">
+    <strong>CPF: </strong>
+    {{cliente.cpf | cpf}}
+</div>
+
+<div class="w-100 pb-1">
+    <strong>Telefones: </strong>
+    {{cliente.telefone1 | phone }} / {{cliente.telefone2 | phone}}
+</div>
+
+<div class="w-100 pb-1">
+    <strong>Endereço: </strong>
+    {{cliente.endereco.logradouro}}
+    <span *ngIf="cliente.endereco.numero">, {{cliente.endereco.numero}}</span>
+</div>
+
+<div class="w-100 pb-1">
+    <strong>CEP: </strong>
+    {{cliente.endereco.cep | cep}}
+</div>
+
+<div class="w-100 pb-1">
+    <strong>Bairro: </strong>
+    {{cliente.endereco.bairro}}
+</div>
+
+<div class="w-100 pb-1">
+    <strong>Cidade: </strong>
+    {{cliente.endereco.cidade}}
+    <span *ngIf="cliente.endereco.uf"> - {{cliente.endereco.uf}}</span>
+</div>
+
+<div class="w-100 pb-1">
+    <strong>Referência: </strong>
+    {{cliente.endereco.referencia}}
+</div>
+
+<div class="w-100 pt-2">
+    <hr/>
+</div>
+
+<div class="w-100 d-flex">
+    <button mat-button mat-dialog-close="close" class="ml-auto">Fechar</button>
+    <button mat-button mat-dialog-close="edit">Editar</button>
+</div>

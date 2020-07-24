@@ -1,0 +1,38 @@
+@mixin template-components-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, accent);
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+
+    app-navbar {
+        mat-toolbar {
+            background-color: mat-color($primary) !important;
+        }
+    }
+
+    app-navitem {
+        [mat-button]:hover {
+            color: mat-color($foreground, text);
+            background-color: mat-color($background, focused-button);
+        }
+    }
+
+    [mat-table] {
+        [mat-header-row] {
+            background-color: mat-color($background, status-bar);
+        }
+
+        [mat-row]:nth-child(even) {
+            background-color: mat-color($background, hover, 0.05);
+        }
+
+        [mat-row]:nth-child(odd) {
+            background-color: mat-color($background, hover, 0.03);
+        }
+        [mat-row]:hover {
+            color: mat-color($primary, text);
+            background-color: mat-color($background, hover, 0.08);
+        }
+    }
+}

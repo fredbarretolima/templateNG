@@ -1,0 +1,26 @@
+// BOOTSTRAP
+
+// -- required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// -- optionals
+@import "~bootstrap/scss/reboot";
+
+// @import "~bootstrap/scss/type";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities";
+
+
+
+
+// GOOGLE FONTS
+@import "assets/css/GoogleRobotoFont.css";
+@import "assets/css/GoogleMaterialIconsFont.css";
+
+
+
+
+// ANGULAR MATERIAL THEME
+@import "assets/css/themes/themes.scss";

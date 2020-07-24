@@ -1,0 +1,10 @@
+<mat-toolbar>
+  
+  <a class="d-flex align-items-center mr-auto text-decoration-none text-reset" routerLink="">
+    <mat-icon *ngIf="icon" aria-hidden="true">{{icon}}</mat-icon>
+    <span class="ml-2 font-weight-bold">{{brand}}</span>
+  </a>
+
+  <ng-content></ng-content>
+
+</mat-toolbar>
