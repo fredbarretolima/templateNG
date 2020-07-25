@@ -1,52 +1,59 @@
-<h2 class="text-center">Cliente</h2>
-
-<div class="w-100 pb-1">
-    <strong>Nome: </strong>
-    {{cliente.nome}}
+<div class="d-flex align-items-center text-center">
+    <h2 class="m-0 flex-grow-1">Cliente</h2>
+    <button mat-icon-button mat-dialog-close="fechar"><mat-icon color="accent">close</mat-icon></button>
 </div>
 
-<div class="w-100 pb-1">
-    <strong>CPF: </strong>
-    {{cliente.cpf | cpf}}
+<div class="w-100">
+    <hr />
 </div>
 
-<div class="w-100 pb-1">
-    <strong>Telefones: </strong>
-    {{cliente.telefone1 | phone }} / {{cliente.telefone2 | phone}}
+<div class="w-100">
+    <span class="field field-label">Nome: </span>
+    <span class="field field-value">{{cliente.nome}}</span>
 </div>
 
-<div class="w-100 pb-1">
-    <strong>Endereço: </strong>
-    {{cliente.endereco.logradouro}}
+<div class="w-100">
+    <span class="field field-label">CPF: </span>
+    <span class="field field-value">{{cliente.cpf | cpf}}</span>
+</div>
+
+<div class="w-100">
+    <span class="field field-label">Telefones: </span>
+    <span class="field field-value">{{cliente.telefone1 | phone }} / {{cliente.telefone2 | phone}}</span>
+</div>
+
+<div class="w-100">
+    <span class="field field-label">Endereço: </span>
+    <span class="field field-value">{{cliente.endereco.logradouro}}</span>
     <span *ngIf="cliente.endereco.numero">, {{cliente.endereco.numero}}</span>
 </div>
 
-<div class="w-100 pb-1">
-    <strong>CEP: </strong>
-    {{cliente.endereco.cep | cep}}
+<div class="w-100">
+    <span class="field field-label">CEP: </span>
+    <span class="field field-value">{{cliente.endereco.cep | cep}}</span>
 </div>
 
-<div class="w-100 pb-1">
-    <strong>Bairro: </strong>
-    {{cliente.endereco.bairro}}
+<div class="w-100">
+    <span class="field field-label">Bairro: </span>
+    <span class="field field-value">{{cliente.endereco.bairro}}</span>
 </div>
 
-<div class="w-100 pb-1">
-    <strong>Cidade: </strong>
-    {{cliente.endereco.cidade}}
+<div class="w-100">
+    <span class="field field-label">Cidade: </span>
+    <span class="field field-value">{{cliente.endereco.cidade}}</span>
     <span *ngIf="cliente.endereco.uf"> - {{cliente.endereco.uf}}</span>
 </div>
 
-<div class="w-100 pb-1">
-    <strong>Referência: </strong>
-    {{cliente.endereco.referencia}}
+<div class="w-100">
+    <span class="field field-label">Referência: </span>
+    <span class="field field-value">{{cliente.endereco.referencia}}</span>
 </div>
 
-<div class="w-100 pt-2">
-    <hr/>
+<div class="w-100 pb-2">
+    <hr />
 </div>
 
-<div class="w-100 d-flex">
-    <button mat-button mat-dialog-close="close" class="ml-auto">Fechar</button>
-    <button mat-button mat-dialog-close="edit">Editar</button>
+<div class="w-100 d-flex justify-content-end">
+    <button mat-stroked-button mat-dialog-close="editar">EDITAR</button>
+    <button mat-stroked-button mat-dialog-close="excluir" class="ml-1">EXCLUIR</button>
 </div>

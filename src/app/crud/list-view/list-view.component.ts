@@ -7,7 +7,7 @@ import { GenericEditDialogComponent } from '../generic-edit-dialog/generic-edit-
 import { GenericViewDialogComponent } from '../generic-view-dialog/generic-view-dialog.component';
 import { ColumnDef } from './column-def';
 
-export abstract class ListViewComponent<Model extends GenericModel> implements OnInit, AfterViewInit {
+export class ListViewComponent<Model extends GenericModel> implements OnInit, AfterViewInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 

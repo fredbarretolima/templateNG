@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FluxoCaixaComponent } from './fluxo-caixa.component';
+import { InDevelopmentComponent } from './in-development.component';
 
-describe('FluxoCaixaComponent', () => {
-  let component: FluxoCaixaComponent;
-  let fixture: ComponentFixture<FluxoCaixaComponent>;
+describe('InDevelopmentComponent', () => {
+  let component: InDevelopmentComponent;
+  let fixture: ComponentFixture<InDevelopmentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FluxoCaixaComponent ]
+      declarations: [ InDevelopmentComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FluxoCaixaComponent);
+    fixture = TestBed.createComponent(InDevelopmentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

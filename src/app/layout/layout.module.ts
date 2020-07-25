@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NavitemComponent } from './navitem/navitem.component';
 import { PageComponent } from './page/page.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { InDevelopmentComponent } from './in-development/in-development.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     NavbarComponent,
     NavitemComponent,
     PageComponent,
-    SidebarComponent
+    SidebarComponent,
+    InDevelopmentComponent
   ],
   imports: [
     CommonModule,

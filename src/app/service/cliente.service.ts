@@ -7,7 +7,7 @@ import { GenericService } from './generic-service';
 @Injectable({
   providedIn: 'root'
 })
-export class ClienteService implements GenericService<Cliente> {
+export class ClienteService extends GenericService<Cliente> {
 
   private address: Endereco = {
     bairro: 'Bairro',
@@ -31,7 +31,9 @@ export class ClienteService implements GenericService<Cliente> {
   private clientes: Cliente[] = [];
 
   constructor() {
-    for (let i = 1; i < 1000; i++) {
+    super();
+
+    for (let i = 1; i < 250; i++) {
       let cliente: Cliente = {};
       Object.assign(cliente, this.cliente);
       cliente.id = i;
@@ -39,7 +41,6 @@ export class ClienteService implements GenericService<Cliente> {
     }
   }
 
-  
   getOne(id: number): Observable<Cliente> {
     return of(this.clientes.find(cliente => (cliente.id == id)));
   }
@@ -70,9 +71,12 @@ export class ClienteService implements GenericService<Cliente> {
     return of();
   }
 
+  recoverById(id: number): Observable<Cliente> {
+    return this.getOne(id);
+  }
+
   getCount(): Observable<number> {
     return of(this.clientes.length);
   }
-
 
 }

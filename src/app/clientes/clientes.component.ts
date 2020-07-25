@@ -48,11 +48,11 @@ export class ClientesComponent extends ListViewComponent<Cliente> {
   }
 
   openView(): MatDialogRef<ClienteViewComponent> {
-    return this.dialog.open(ClienteViewComponent, { data: this.model });
+    return this.dialog.open(ClienteViewComponent, { data: this.model, autoFocus: false  });
   }
   
   openEdit() {
-    return this.dialog.open(ClienteEditComponent, { data: this.model });
+    return this.dialog.open(ClienteEditComponent, { data: this.model, autoFocus: false });
   }
 
 }

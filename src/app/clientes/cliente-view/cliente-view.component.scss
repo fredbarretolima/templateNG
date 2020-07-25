@@ -1,0 +1,19 @@
+mat-icon [mat-dialog-close] {
+    cursor: pointer;
+}
+
+.field {
+    line-height: 1.8em;
+}
+
+.field-label {
+    //text-transform: uppercase;
+    font-weight: bold;
+    text-align: right;
+}
+
+.field-value {
+    font-weight: normal;
+    flex-grow: 1;
+}
+
